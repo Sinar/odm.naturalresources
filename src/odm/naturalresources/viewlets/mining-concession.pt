@@ -1,3 +1,22 @@
-<div class="days_to_conf">
-    ${view/message}
+<div class="mining-concession"
+     tal:condition="python:view.backrefs(attribute_name='licensed_to')">
+    <hr />
+
+    <h4>Mining Concessions</h4>
+    <p>Company has a license for the following mining concessions </p>
+
+    <div
+        tal:condition="python:view.backrefs(attribute_name='licensed_to')">
+        <h5><u>Concessions</u></h5>
+        <div 
+            tal:repeat="source python:
+            view.backrefs(attribute_name='licensed_to')">
+            <p>
+                <a tal:attributes="href source/absolute_url">
+                    <span tal:content="source/title"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+
 </div>

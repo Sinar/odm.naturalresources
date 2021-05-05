@@ -8,13 +8,12 @@
 
   <browser:viewlet
      name="mining-concession"
-     for="plone.app.contenttypes.interfaces.IDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     for="popolo.contenttypes.content.organization.IOrganization"
+     manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
      layer="odm.naturalresources.interfaces.IOdmNaturalresourcesLayer"
      class=".mining_concession.MiningConcession"
      template="mining-concession.pt"
      permission="zope2.View"
      />
-
 
 </configure>
