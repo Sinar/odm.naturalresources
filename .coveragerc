@@ -1,0 +1,6 @@
+[report]
+include =
+    src/odm/*
+omit =
+    */test*
+    */upgrades/*
